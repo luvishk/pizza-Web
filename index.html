@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<!-- Include meta tag to ensure proper rendering and touch zooming -->
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  	<!-- Include jQuery Mobile stylesheets -->
+  	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+  	<!-- Include the jQuery library -->
+  	<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+  	<!-- Include the jQuery Mobile library -->
+  	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+  	<!--add image-->
+  	<style type="text/css">
+  	body {
+    	background: url(pizza2.png);
+    	background-position: center center;
+    	background-repeat: repeat-y;
+   	 	background-attachment: scroll;
+    	background-size: 100% 100%;
+	}
+
+	.ui-page {
+    	background: transparent;
+	}
+
+	.ui-content{
+    	background: transparent;
+	}
+	
+	ul.a {
+    	list-style-type: circle;
+	}
+
+	</style>
+
+	<script>
+	//page setup
+	$(document).ready(function(){
+        $("#div1").fadeIn(1000);
+	});
+
+	</script>
+
+	<script>
+	//clear fields and alert when submit
+		function submit() {
+			document.getElementById('fname').value=null;
+			document.getElementById('lname').value=null;
+			document.getElementById('phoneno').value=null;
+			document.getElementById('address').value=null;
+			document.getElementById('emailid').value=null;
+			document.getElementById('info').value=null;
+    		alert("Your order has been received. Thank you for your purchase!");
+		}	
+	</script>
+	
+	<title>Pizza Chain</title>
+
+</head>
+
+<body>
+	
+<div data-role="page" id="selectCity">
+  	<div data-role="header"> <!--header!-->
+  		<h1>Welcome to Pizza Chain!</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+   		<p style="font-style:italic;color:white;font-size:200%;background-color:black;width:27%;margin-right:1cm;">Please select city:</p>
+
+		<div id="div1" style="display:none;margin-left:0.5cm;margin-right:0.5cm">
+		<!--user selects city/location!-->
+			<ul data-role="listview">   
+      			<li data-icon="location"><a href="#nypizza">NYC Pizza Corner @ New York</a></li>
+      			<li data-icon="location"><a href="#ilpizza">Windy City Pizza Corner @ Chicago</a></li> 
+      			<li data-icon="location"><a href="#sfpizza">Bay Area Pizza Corner @ San Francisco</a></li>    
+    		</ul>
+
+		</div>
+   	
+  </div>
+
+</div>
+
+<div data-role="page" id="nypizza">
+  	<div data-role="header"> <!--header!-->
+  		<h1>NYC Pizza Corner @ New York</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#selectCity" style="width:10%" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+
+   		<p style="font-style:italic;color:white;font-size:200%;background-color:black;width:47%">Please select our speciality pizza:</p> <!--pizza options!-->
+		
+		<div data-role="collapsible">
+
+			<h1>NY Cheese Lovers Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Parmesan sauce</li>
+  				<li>Extra cheese</li>
+  				<li>Feta Cheese on the crust edge</li>
+			</ul>
+			
+			<a href="#nycheese" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>NY Veggie Lovers Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Fresh mushrooms</li>
+  				<li>Fresh red onions</li>
+  				<li>Fresh green bell peppers</li>
+			</ul>
+
+			<a href="#nyveggie" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>NY Meat Lovers Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Pepperoni</li>
+  				<li>Italian sausage</li>
+  				<li>Slow-roasted ham</li>
+			</ul>
+			
+			<a href="#nymeat" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+   	
+  </div>
+
+</div>
+
+<div data-role="page" id="ilpizza">
+  	<div data-role="header">
+  		<h1>Windy City Pizza Corner @ Chicago</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#selectCity" style="width:10%" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+
+   		<p style="font-style:italic;color:white;font-size:200%;background-color:black;width:47%">Please select our speciality pizza:</p> <!--pizza options!-->
+
+		<div data-role="collapsible">
+
+			<h1>Cheesy Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Cheddar Cheese</li>
+  				<li>Feta Cheese</li>
+  				<li>Parmesan on the crust edge</li>
+			</ul>
+
+			<a href="#ilcheese" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>Chicago Veggie 5 Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Fresh mushrooms</li>
+  				<li>Jalapeno peppers</li>
+  				<li>Pineapple</li>
+			</ul>
+
+			<a href="#ilveggie" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>Meat Only Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Pepperoni</li>
+  				<li>Beef</li>
+  				<li>Bacon</li>
+			</ul>
+
+			<a href="#ilmeat" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+   	
+  </div>
+
+</div>
+
+<div data-role="page" id="sfpizza">
+  	<div data-role="header">
+  		<h1>Bay Area Pizza Corner @ San Francisco</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#selectCity" style="width:10%" class="ui-btn ui-icon-home ui-btn-icon-left">Home</a>
+
+   		<p style="font-style:italic;color:white;font-size:200%;background-color:black;width:47%">Please select our speciality pizza:</p> <!--pizza options!-->
+
+		<div data-role="collapsible">
+
+			<h1>Bay Area Cheese Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Cheesy sauce</li>
+  				<li>Shredded parmesan asiago</li>
+  				<li>Shredded Provolone cheese</li>
+  				<li>Feta cheese</li>
+			</ul>
+
+			<a href="#sfcheese" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>All-in Veggie Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Fresh mushrooms</li>
+  				<li>Black olives</li>
+  				<li>Onions</li>
+			</ul>
+
+			<a href="#sfveggie" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+
+		<div data-role="collapsible">
+
+			<h1>All-in Meat Pizza</h1>
+			<p> Toppings: </p>
+			<ul class="a">
+  				<li>Classic marinara sauce</li>
+  				<li>Regular cheese</li>
+  				<li>Pepperoni</li>
+  				<li>Pork</li>
+  				<li>Philly steak</li>
+			</ul>
+
+			<a href="#sfmeat" class="ui-btn ui-icon-check ui-btn-icon-right">Order Now!</a>
+
+		</div>
+   	
+  </div>
+
+</div>
+
+
+<div data-role="page" id="nycheese">
+  	<div data-role="header">
+  		<h1>NY Cheese Lovers Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#nypizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a><br> 
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="nyveggie">
+  	<div data-role="header">
+  		<h1>NY Veggie Lovers Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#nypizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="nymeat">
+  	<div data-role="header">
+  		<h1>NY Meat Lovers Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#nypizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="ilcheese">
+  	<div data-role="header">
+  		<h1>Cheesy Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#ilpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="ilveggie">
+  	<div data-role="header">
+  		<h1>Chicago Veggie 5 Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#ilpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="ilmeat">
+  	<div data-role="header">
+  		<h1>Meat Only Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#ilpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="sfcheese">
+  	<div data-role="header">
+  		<h1>Bay Area Cheese Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#sfpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="sfveggie">
+  	<div data-role="header">
+  		<h1>All-in Veggie Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#sfpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>    
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+
+<div data-role="page" id="sfmeat">
+  	<div data-role="header">
+  		<h1>All-in Meat Pizza</h1>
+  	</div>
+	
+	<div data-role="main" class="ui-content">
+
+		<a href="#sfpizza" style="width:10%" class="ui-btn ui-icon-back ui-btn-icon-left">Go Back</a>
+
+		<!--user info!-->
+
+		<label for="fname" class="ui-hidden-accessible">Firstname</label>
+      	<input type="text" name="fname" id="fname" placeholder="First name..." required>
+
+      	<label for="lname" class="ui-hidden-accessible">Lastname</label>
+      	<input type="text" name="lname" id="lname" placeholder="Last name..." required>
+
+      	<label for="emailid" class="ui-hidden-accessible">Emailid</label>
+      	<input type="text" name="emailid" id="emailid" placeholder="Email id..." required>
+
+      	<label for="phoneno" class="ui-hidden-accessible">Phoneno</label>
+      	<input type="text" name="phoneno" id="phoneno" placeholder="Phone no..." required>
+
+      	<label for="address" class="ui-hidden-accessible">Address</label>
+      	<input type="text" name="address" id="address" placeholder="Address..." required>
+
+      	<label for="info" class="ui-hidden-accessible">Additional Information:</label>
+        <textarea name="addinfo" id="info" placeholder="Additional Information..."></textarea>
+      	
+      	<a href="#selectCity" onclick="submit()" style="width:20%" class="ui-btn ui-icon-check ui-btn-icon-left">Submit</a>
+
+  	</div>
+
+</div>
+  
+
+
+</body>
+</html>>
